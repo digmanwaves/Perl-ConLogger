@@ -1,0 +1,15 @@
+<SOFTPKG NAME="ConLogger" VERSION="1.00">
+  <ABSTRACT>Simple logging facility for STDOUT status printing</ABSTRACT>
+  <AUTHOR>Walter Daems / Digital Manifold Waves &lt;walter@digmanwaves.net&gt;</AUTHOR>
+  <PROVIDE NAME="ConLogger::" VERSION="1.00" />
+  <PROVIDE NAME="ConLogger::SubTask" VERSION="1.00" />
+  <PROVIDE NAME="ConLogger::ProgressBar" VERSION="1.00" />
+  <IMPLEMENTATION>
+    <ARCHITECTURE NAME="i686-linux-gnu-thread-multi-64int-5.14" />
+    <CODEBASE HREF="ConLogger-1.00.tar.gz" />
+  </IMPLEMENTATION>
+  <IMPLEMENTATION>
+    <ARCHITECTURE NAME="MSWin32-x86-multi-thread-5.14" />
+    <CODEBASE HREF="ConLogger-1.00.tar.gz" />
+  </IMPLEMENTATION>
+</SOFTPKG>
