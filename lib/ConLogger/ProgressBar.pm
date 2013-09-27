@@ -47,9 +47,45 @@ sub progress {
 
 __END__
 
+=head1 SYNOPSIS
+
+  use ConLogger::ProgressBar;
+
+  use ConLogger::SubTask;
+
+  my $task = ConLogger::SubTask->new();
+  ConLogger::logitem( "Starting burning wood in stove nr. 5" );
+
+  for( my $i = 0; $i < 12; ++$i ) {
+
+    my $taski = ConLogger::SubTask->new();
+    ConLogger::logitem( "Starting batch $i" );
+
+    my $pb = ConLogger::ProgressBar->new();
+
+    for( my $j = 0; $j < 24; ++$j ) {
+      $pb->progress( $j, 24 );
+      # burn();
+    }
+
+  }
+
+  ConLogger::logitem( "Stove nr. 5 has finished" );
+
+=head1 DESCRIPTION
+
+This module provides a properly indented progress bar. It employs the
+RAII programming idiom to keep things tidy and clean.
+
 =head1 SEE ALSO
 
- --
+=over
+
+=item * ConLogger
+
+=item * ConLogger::SubTask
+
+=back
 
 =head1 COPYRIGHT
 
@@ -57,6 +93,5 @@ __END__
 
 =head1 AUTHOR
 
- Digital Manifold Waves -- F<walter.daems@ua.ac.be>
-
+ Digital Manifold Waves -- F<walter.daems@uantwerpen.be>
 =cut

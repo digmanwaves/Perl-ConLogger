@@ -39,9 +39,47 @@ sub logcont {
 
 __END__
 
+=head1 SYNOPSIS
+
+  use ConLogger;
+
+  ConLogger::logitem( "preheating the stove" );
+
+  # start_heater();
+  # wait_until_temperature_high_enough();
+
+  ConLogger::logitem( "starting burning process" );
+  ConLogger::logcont( "at 2000K" );
+
+=head1 DESCRIPTION
+
+This module allows logging events to the console (STDOUT). These
+events are properly indented based on the indentation level set using
+the package variable $__indentLevel. This variable can be managed by
+the ConLogger::SubTask module, to allow for exception-safe indentation
+management.
+
+The module has two submodules:
+
+=over
+
+=item * ConLogger::SubTask to allow for exception-safe indentation
+management
+
+=item * ConLogger::ProgressBar to allow easy progress monitoring using
+a text-bar
+
+=back
+
 =head1 SEE ALSO
 
- --
+=over
+
+=item * ConLogger::SubTask
+
+=item * ConLogger::ProgressBar
+
+=back
 
 =head1 COPYRIGHT
 
@@ -49,6 +87,6 @@ __END__
 
 =head1 AUTHOR
 
- Digital Manifold Waves -- F<walter.daems@ua.ac.be>
+ Digital Manifold Waves -- F<walter.daems@uantwerpen.be>
 
 =cut
